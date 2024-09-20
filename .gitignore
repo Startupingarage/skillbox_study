@@ -1,0 +1,19 @@
+#файлы Replit 
+**/.replit
+**/.config
+**/.upm
+**/.replit.nix
+**/replit_zip_error_log.txt
+
+# файлы VS Code
+**/.vscode/
+**/.env
+
+# Системные 
+**/.DS_Store
+**/*.pyc
+**/__pycache__/
+
+# Файлы окружений 
+**/venv/
+
