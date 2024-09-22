@@ -18,3 +18,32 @@ print('Задача 8. Игра «Компьютер угадывает числ
 # Подсказка: При желании найдите описание алгоритма бинарного поиска и попробуйте применить в этой задаче.
 #Разбор подобного решения будет в следующем модуле.
 
+
+"""
+Алгоритм бинарного поиска
+"""
+req_num = int(input('Загадайте число: '))
+min_search = 1
+max_search = 100
+
+try_count = 0
+
+while try_count < 7:
+    try_count += 1
+
+    midpoint = (min_search + max_search)//2
+    guesswork = int(input(f'Твое число равно (1), больше (2) или меньше (3) чем {midpoint}: '))
+
+    if guesswork == 1:
+        print(f'Угадано за {try_count} попыток ')
+        break
+    elif guesswork == 2:
+        min_search = midpoint + 1
+    elif guesswork == 3:
+        max_search = midpoint - 1
+
+if try_count == 7:
+    print('Не удалось угадать число за 7 попыток. Проверьте корректность ваших ответов\n"Твое число равно (1), больше (2) или меньше (3)"')
+
+        
+
