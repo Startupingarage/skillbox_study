@@ -1,4 +1,3 @@
-from decimal import Decimal
 print('Задача 1. Урок информатики 2')
 
 # В прошлый раз учитель написал программу, которая выводит числа в формате плавающей точки, однако он вспомнил,
@@ -19,8 +18,8 @@ print('Задача 1. Урок информатики 2')
 def calculate_exp():
     while True:
         try:
-            num = Decimal(input('Введите положительное число: '))
-            if num > Decimal(0):
+            num = float(input('Введите положительное число: '))
+            if num > 0:
                 break    
             raise ValueError
             
@@ -28,15 +27,14 @@ def calculate_exp():
             print('Число должно быть больше 0.')
     
     exponent = 0
-    exponent = 0
     while num >= 10:
-        num = num / Decimal(10)
+        num = num / 10
         exponent += 1
     
     while num < 1:
-        num = num * Decimal(10)
+        num = num * 10
         exponent -= 1
 
-    print('Формат плавающей точки: x = {} * 10 ** {}'.format(float(num), exponent))
+    print('Формат плавающей точки: x = {} * 10 ** {}'.format((num), exponent))
 
 calculate_exp()
