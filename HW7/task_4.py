@@ -13,7 +13,7 @@ print('Задача 4. Текстовый редактор')
 # Какую цифру ищем? 0
 # Какую букву ищем? л
 # Количество цифр 0: 2
-# Количество букв л: 1я
+# Количество букв л: 1
 
 
 def count_letters():
@@ -26,15 +26,15 @@ def count_letters():
     num = input('Какую цифру ищем? ').strip()
 
     # Проход по тексту
-    for char in text:
-        if char.lower() == letter:
+    for sym in text:
+        if sym.lower() == letter:
             count_letter += 1
-        if char == num:
+        if sym == num:
             count_num += 1
 
     # Вывод результатов
     print('Количество букв "{}": {}'.format(letter, count_letter))
-    print('Количество цифр "{}": {}'.format(num, count_num))
+    print('Количество цифр "{}": {}'.format(num, count_num), type())
 
 
 count_letters()

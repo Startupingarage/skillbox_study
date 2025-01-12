@@ -16,8 +16,8 @@ print('Задача 4. Первая цифра')
 import math
 
 X = float(input('Введите число: '))
+
 x_int = int(X)
 found = int((X - x_int)*10)
-
 
 print('Первая цифра после десятичной точки {}'.format(found))
